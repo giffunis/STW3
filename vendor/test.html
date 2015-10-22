@@ -1,32 +1,23 @@
+
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>STW3</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/customs.css">
-  <script src="js/temperatura.js"></script>
+  <meta charset="utf-8">
+  <title>Tests para convertidor de temperatura</title>
+  <link rel="stylesheet" media="all" href="mocha.css">
 </head>
 <body>
-<div id="header">
-  <h1 id="titulo">Conversor de temperatura 3</h1>
-</div>
-<!-- /header -->
-<div id="cuerpo">
-  <p>En esta ocación, volvemos a utilizar la herencia y añadimos el uso de hilos (Web Workers)</p>
-  <br>
-  <table>
-    <tr>
-      <th>Temperatura a convertir (Por ejemplo: 32f, 3.2e1F, -5,7C) =></th>
-      <td><input id="entrada" autofocus onchange="convertir()"; placeholder="3.2e1f" size 30></td>
-    </tr>
-    <tr>
-      <th>Temperatura convertida:</th>
-        <td><span class="output" id="salida"></span></td>
-    </tr>
-  </table>
-</div>
-<!-- /cuerpo -->
-
+  <div id="mocha"><p><a href=".">Index</a></p></div>
+  <input id="entrada" placeholder="32F" size="50">
+  <span class="output" id="salida"></span>
+  <div id="messages"></div>
+  <div id="fixtures"></div>
+  <script src="mocha.js"></script>
+  <script src="chai.js"></script>
+  <script src="blanket.js" data-cover-adapter="mocha-blanket.js"></script>
+  <script src="../js/temperatura.js" data-cover></script>
+  <script>mocha.setup('bdd')</script>
+  <script src="tests.js"></script>
+  <script>mocha.run();</script>
 </body>
 </html>
