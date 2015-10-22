@@ -8,8 +8,8 @@ describe("Pruebas BDD", function() {
     it("convertir(32F)", function() {
       entrada.value = "32F";
       convertir();
-      clock.tick( 1000 );
       expect(salida.innerHTML).to.equal("0.0C");
+      done();
     });
 
     it("convertir2(0C)", function() {
