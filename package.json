@@ -5,7 +5,7 @@
   "main": "js/app.js",
   "scripts": {
     "test": "open http://localhost:3000/test.html",
-    "server": "node app.js"
+    "server": "node js/app.js"
   },
   "repository": {
     "type": "git",
