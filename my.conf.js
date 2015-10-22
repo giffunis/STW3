@@ -37,7 +37,7 @@ module.exports = function(config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
     'vendor/test_blanket.html': ['html2js'],
-     'vendor/test.html': ['html2js']
+    'vendor/test.html': ['html2js']
     },
 
 
@@ -66,7 +66,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox'],
+    browsers: ['Firefox'],
 
 
     // Continuous Integration mode
