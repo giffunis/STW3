@@ -1,5 +1,5 @@
 var expect = chai.expect;
-import@ Temperatura
+
 
 describe("Pruebas BDD", function() {
  var aux = document.getElementById("salida");
