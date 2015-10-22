@@ -11,4 +11,4 @@ branches:
     - travis
 
 script:
-- karma start my.conf.js
+- - ./node_modules/karma/bin/karma start --single-run
