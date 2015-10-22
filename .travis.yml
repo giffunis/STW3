@@ -9,3 +9,6 @@ before_script:
 branches:
   only:
     - travis
+
+script:
+- karma start my.conf.js
