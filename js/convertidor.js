@@ -1,5 +1,15 @@
 self.onmessage = function(temperatura) {
   console.log('Recibido la temperatura ' + temperatura.data[0] + temperatura.data[1]);
+
   console.log("Calculando la conversión");
-  self.postMessage(temperatura.data[0]);
+  var salida = "";
+  if(temperatura.data[1] === 'C' || temperatura.data[1] ==='c'){
+    var aux = temperatura.data[0] * (9/5) + 32;
+    salida = aux.toFixed(1) + 'F';
+  }else{
+    var aux = (temperatura.data[0] - 32) * (5/9);
+    salida = aux.toFixed(1) + 'C';
+  }
+
+  self.postMessage(salida);
 }
