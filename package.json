@@ -1,0 +1,19 @@
+{
+  "name": "stw3",
+  "version": "0.0.1",
+  "description": "Uso de WebWorkers",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "open http://localhost:3000/test.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giffunis/STW3.git"
+  },
+  "author": "José Saúl Giffuni",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giffunis/STW3/issues"
+  },
+  "homepage": "https://github.com/giffunis/STW3#readme"
+}
