@@ -1,19 +1,14 @@
-var w;
+var entrada = document.querySelector('#entrada');
 
-function startWorker() {
-    if(typeof(Worker) !== "undefined") {
-        if(typeof(w) == "undefined") {
-            w = new Worker("temperatura.js");
-        }
-        w.onmessage = function(event) {
-            document.getElementById("salida").innerHTML = event.data;
-        };
-    } else {
-        document.getElementById("salida").innerHTML = "Sorry, your browser does not support Web Workers...";
-    }
-}
 
-function stopWorker() {
-    w.terminate();
-    w = undefined;
+if (window.Worker) { //check if Browser supports the Worker api.
+	// Requires script name as input
+	var myWorker = new Worker("temperatura.js");
+
+	entrada.onchange = function() {
+	  myWorker.postMessage([entrada.value]); //sending message as array to the worker
+	  console.log('Message posted to worker');
+	};
+
+
 }
