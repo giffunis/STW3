@@ -36,18 +36,19 @@ describe("Pruebas BDD", function() {
   });
 
   describe("convert()", function() {
-    it("temp.convert()", function() {
+    it("temp.convert(32F)", function() {
         temp = new Temperatura("32F");
         var out = temp.convert();
         expect(out).to.equal("0.0C");
     });
 
-    it("convertir(0C)", function() {
+    it("temp.convert(0.0e0c)", function() {
       temp = new Temperatura("0.0e0c");
       var out = temp.convert();
       expect(out).to.equal("32.0F");
     });
   });
 
+  
 
 });
