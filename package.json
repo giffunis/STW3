@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/giffunis/STW3#readme",
   "devDependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "mocha": "^2.3.3"
   }
 }
