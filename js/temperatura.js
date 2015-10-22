@@ -56,6 +56,6 @@ function convertir(){
     temp.convert2();
   }else{
     console.log('El navegador no acepta webWorker');
-    salida.innerHTML = temp.convert1();
+    salida.innerHTML = temp.convert();
   }
 }
