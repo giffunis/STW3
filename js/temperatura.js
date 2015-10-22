@@ -51,5 +51,11 @@ Temperatura.prototype.convert2 = function(){
 
 function convertir(){
   temp = new Temperatura(entrada.value);
-  temp.convert2();
+  if (window.Worker) {
+    console.log('El navegador acepta webWorker');
+    temp.convert2();
+  }else{
+    console.log('El navegador no acepta webWorker');
+    salida.innerHTML = temp.convert1();
+  }
 }
