@@ -4,7 +4,7 @@
   "description": "Uso de WebWorkers",
   "main": "js/app.js",
   "scripts": {
-    "test": "open http://localhost:3000/test.html",
+    "test": "open http://localhost:3000/vendor/test.html",
     "server": "node js/app.js"
   },
   "repository": {
