@@ -37,7 +37,16 @@ Temperatura.prototype.convert = function(){
   }
 }
 
+Temperatura.prototype.convert2 = function(){
+  var myWorker = new Worker("js/convertidor.js");
+  myWorker.postMessage([this.valor, this.tipo]);
+  console.log('Se ha enviado el valor y el tipo al worker');
+  myWorker.onmessage = function(e) {
+  console.log('Message received from worker');
+}
+}
+
 function convertir(){
   temp = new Temperatura(entrada.value);
-  salida.innerHTML = temp.convert();
+  salida.innerHTML = temp.convert2();
 }
